@@ -12,8 +12,8 @@ for _ in range(N):
         heapq.heappush(min_heap, num)
     # print(max_heap, min_heap)
     if min_heap and -max_heap[0] > min_heap[0]:
-        max_v = heapq.heapop(max_heap)
-        min_v = heapq.heapop(min_heap)
+        max_v = heapq.heappop(max_heap)
+        min_v = heapq.heappop(min_heap)
         heapq.heappush(max_heap, -min_v)
         heapq.heappush(min_heap, -max_v)
         # print("changed : ",max_heap, min_heap)
